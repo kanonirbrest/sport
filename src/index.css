@@ -18,13 +18,13 @@ code {
   width: 95vw;
   margin: 0 auto;
   grid-template-columns: 2fr 8fr;
-  grid-auto-rows: 1fr 2fr 7fr 1fr;
+  grid-auto-rows: 1fr 2fr 7fr;
   grid-gap: 10px;
   grid-template-areas: 
    'header header'
    'sidebar banner'
    'sidebar main'
-   'footer footer';
+   /* 'footer footer'; */
 }
 
 header {
