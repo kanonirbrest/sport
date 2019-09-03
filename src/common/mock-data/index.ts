@@ -83,4 +83,35 @@ export const articles = [
     explicabo.`,
     title: `This is my title`
   },
-]
+];
+
+export const sidebarItems = [
+  {
+    id: 1,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 1,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 1,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 1,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  }
+];
