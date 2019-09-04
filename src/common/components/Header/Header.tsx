@@ -4,7 +4,10 @@ import Menu from './../../../components/Menu/Menu';
 export default function Header() {
     return (
         <header>
-            <h1>Газета</h1>
+            <div className="headerContainer">
+                <h1>Газета.by</h1>
+                <h2>Брестское Динамо в серии пенальти выигрывает кубок беларуси 2007!</h2>
+            </div>
             <Menu/>
         </header>
     )

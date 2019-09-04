@@ -13,6 +13,16 @@ body {
   padding: 40px;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerContainer h2 {
+  width: 80%;
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -42,6 +52,9 @@ header {
 header h1 {
   text-align: start;
   padding-left: 50px;
+  font-size: 45px;
+  margin: 0;
+  line-height: 50px;
 }
 
 footer {
