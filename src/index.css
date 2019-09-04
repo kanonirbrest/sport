@@ -9,6 +9,10 @@ body {
   filter: sepia(11%);
 }
 
+.mainContainer {
+  padding: 40px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -81,7 +85,7 @@ main::-webkit-scrollbar { width: 0 !important }
   /* width:70%; */
   /* height:200px; */
   background:#FFF;
-  margin:40px auto;
+  /* margin:40px auto; */
 }
 
 .effect2
@@ -111,4 +115,68 @@ main::-webkit-scrollbar { width: 0 !important }
   transform: rotate(3deg);
   right: 10px;
   left: auto;
+}
+
+
+/* effecrt7 */
+.effect7
+{
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+    right:10px; 
+    left:auto; 
+    transform:skew(8deg) rotate(3deg);
+}
+
+/* paper effect/ */
+.paper {
+  background: #fff;
+  /* padding: 30px; */
+  position: relative;
+}
+
+.paper,
+.paper::before,
+.paper::after {
+  /* Styles to distinguish sheets from one another */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #bbb;
+}
+
+.paper::before,
+.paper::after {
+  content: "";
+  position: absolute;
+  height: 103%;
+  width: 98%;
+  background-color: #eee;
+}
+
+.paper::before {
+  right: 28px;
+  top: -10px;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.paper::after {
+  right: -5px;
+  top: 5px;
+  transform: rotate(1deg);
+  z-index: -2;
 }

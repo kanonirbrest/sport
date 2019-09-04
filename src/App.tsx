@@ -10,12 +10,20 @@ import Banner from './components/Banner/Banner';
 const App: React.FC = () => {
   return (
     <div className="mainContainer">
+      <div className="paper">
       <div className="App effect2 box">
         <Header/>
         <Sidebar/>
         <Banner/>
         <MainContent/>
       </div>
+      </div>
+      {/* <div className="App effect2 box">
+        <Header/>
+        <Sidebar/>
+        <Banner/>
+        <MainContent/>
+      </div> */}
       {/* <Footer/> */}
     </div>
   );
