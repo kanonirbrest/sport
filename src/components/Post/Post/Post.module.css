@@ -1,0 +1,8 @@
+.postWrapper {
+    columns: 200px auto;
+    font-size: 12px;
+    height: 100%;
+    /* column-count: auto; */
+    column-fill: auto;
+}
+
