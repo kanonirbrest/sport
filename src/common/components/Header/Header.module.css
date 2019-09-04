@@ -1,0 +1,23 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerContainer h2 {
+    width: 80%;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    border-bottom: 1px solid #000;
+}
+  
+header h1 {
+text-align: start;
+padding-left: 50px;
+font-size: 45px;
+margin: 0;
+line-height: 50px;
+}
