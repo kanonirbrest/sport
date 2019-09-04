@@ -94,21 +94,42 @@ export const sidebarItems = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
     comments: [
       {},{},{},{}
     ]
   },
   {
-    id: 1,
+    id: 3,
     content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
     comments: [
       {},{},{},{}
     ]
   },
   {
-    id: 1,
+    id: 4,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 5,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 6,
+    content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
+    comments: [
+      {},{},{},{}
+    ]
+  },
+  {
+    id: 7,
     content: `Sed ut perspiciatis, unde omnis iste natus error sit voluptatem`,
     comments: [
       {},{},{},{}

@@ -1,10 +1,15 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import {sidebarItems} from './../../common/mock-data';
+import SidebarNewsItem from './../SidebarNewsItem/SidebarNewsItem';
 export default class Sidebar extends Component {
     render() {
+        let sidebarNewsItems = sidebarItems.map((item, index) => {
+            return <SidebarNewsItem index={index} item={item}/>
+        })
+
         return (
             <aside id='sidebar'>
-                Sidebar
+                {sidebarNewsItems}
             </aside>
         )
     }

@@ -29,7 +29,7 @@ code {
 
 header {
   grid-area: header;
-  background: grey;
+  border-bottom: 1px solid #000;
 }
 
 footer {
@@ -39,15 +39,17 @@ footer {
 
 main {
   grid-area: main;
-  background: grey;
+  /* background: grey; */
 }
 
 #sidebar {
   grid-area: sidebar;
-  background: grey;
+  /* background: grey; */
 }
 
 .banner {
   grid-area: banner;
   background: lightgray;
+  background-image: url('http://www.banneradsthatpay.com/img/adsthatpay_01.png');
+  /* min-height: 200px; */
 }
