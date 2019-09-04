@@ -1,8 +1,8 @@
 .postsWrapper {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 8vw);
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: 100px 1fr; */
     grid-gap: 15px; 
 }
 
@@ -11,7 +11,7 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 12px;
     border: 2px solid black;
     background: white;

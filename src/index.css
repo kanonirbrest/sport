@@ -1,10 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Old Standard TT', serif;
+  filter: sepia(11%);
 }
 
 code {
@@ -14,10 +16,10 @@ code {
 
 .App {
   display: grid;
-  height: 100vh;
-  width: 95vw;
+  height: 90vh;
+  width: 92vw;
   margin: 0 auto;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 2fr 10fr;
   grid-auto-rows: 1fr 2fr 7fr;
   grid-gap: 10px;
   grid-template-areas: 
@@ -30,6 +32,12 @@ code {
 header {
   grid-area: header;
   border-bottom: 1px solid #000;
+  /* display: flex */
+}
+
+header h1 {
+  text-align: start;
+  padding-left: 50px;
 }
 
 footer {
@@ -39,8 +47,12 @@ footer {
 
 main {
   grid-area: main;
+  padding: 10px;
+  overflow: scroll;
   /* background: grey; */
 }
+
+main::-webkit-scrollbar { width: 0 !important }
 
 #sidebar {
   grid-area: sidebar;
@@ -51,5 +63,52 @@ main {
   grid-area: banner;
   background: lightgray;
   background-image: url('http://www.banneradsthatpay.com/img/adsthatpay_01.png');
+  filter: sepia(60%);
+  margin: 10px;
+  border-right: 1px solid #000;
   /* min-height: 200px; */
+}
+
+
+/* animation */
+.box h3{
+  text-align:center;
+  position:relative;
+  top:80px;
+}
+
+.box {
+  /* width:70%; */
+  /* height:200px; */
+  background:#FFF;
+  margin:40px auto;
+}
+
+.effect2
+{
+  position: relative;
+  box-shadow:0 1px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+}
+
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+
+.effect2:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
 }

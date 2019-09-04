@@ -9,11 +9,13 @@ import Banner from './components/Banner/Banner';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Header/>
-      <Sidebar/>
-      <Banner/>
-      <MainContent/>
+    <div className="mainContainer">
+      <div className="App effect2 box">
+        <Header/>
+        <Sidebar/>
+        <Banner/>
+        <MainContent/>
+      </div>
       {/* <Footer/> */}
     </div>
   );
