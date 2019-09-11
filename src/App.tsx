@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
 // import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 
@@ -13,21 +14,41 @@ import Post from './components/Post/Post/Post';
 import './assets/styles/mainPage.css';
 import './assets/styles/paperEffect.css';
 
-const App: React.FC = () => {
-  return (
-    <div className="mainContainer">
-      <div className="paper">
-      <div className="App effect2 box">
-        <Header/>
-        <Sidebar/>
-        <Banner/>
-        <Route path="/" exact render={() => <MainContent/>} />
-        <Route path="/post/:id" render={() => <Post />} />
-        {/* <MainContent/> */}
+const Caanvas = React.forwardRef((props, ref: any) => (
+  <canvas id="pageflip-canvas" ref={ref}></canvas>
+));
+
+class App extends Component {
+  canvasRef: any;
+
+  constructor(props: any) {
+    super(props);
+    this.canvasRef = React.createRef();
+  }
+
+  componentDidMount() {
+    console.log(this.canvasRef);
+  }
+
+  render() {
+    return (
+      <div className="wrapper">
+        <div className="mainContainer">
+          <div className="paper">
+            <Caanvas ref={this.canvasRef}/>
+            <div className="App effect2 box" id="book">
+              <Header />
+              <Sidebar />
+              {/* <Banner /> */}
+              <Route path="/" exact render={() => <MainContent canvas={this.canvasRef} />} />
+              <Route path="/post/:id" render={() => <Post />} />
+              {/* <MainContent/> */}
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

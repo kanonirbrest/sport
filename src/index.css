@@ -11,6 +11,10 @@ body {
 
 .mainContainer {
   padding: 40px;
+  /*new*/
+  height: calc(100% - 80px);
+  width: calc(100% - 80px);
+  position: absolute;
 }
 
 /* code {
@@ -29,7 +33,7 @@ body {
   grid-gap: 10px;
   grid-template-areas: 
    'header header'
-   'sidebar banner'
+   'sidebar main'
    'sidebar main'
    /* 'footer footer'; */
 }
@@ -43,6 +47,8 @@ main {
   grid-area: main;
   padding: 10px;
   overflow: scroll;
+  background: white;
+  filter: sepia(60%);
 }
 
 main::-webkit-scrollbar { width: 0 !important }
@@ -61,4 +67,85 @@ main::-webkit-scrollbar { width: 0 !important }
 }
 /* ============ grid-scheme =========*/
 
+/* ============ page flip effect =========*/
+body, h2, p {
+	margin: 0;
+	padding: 0;
+}
 
+body {
+	background-color: #444;
+	color: #333;
+	font-family: Helvetica, sans-serif;
+}
+
+#book {
+	/* background: url("book.png") no-repeat; */
+	position: absolute;
+  height: 726px;
+  width: 835px;
+}
+
+#pages section {
+	display: block;
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	left: 415px;
+	top: 5px;
+	overflow: hidden;
+}
+	#pages section>div {
+		display: block;
+		width: 400px;
+		height: 250px;
+		font-size: 12px;
+	}
+	#pages section p,
+	#pages section h2 {
+		padding: 3px 35px;
+		line-height: 1.4em;
+		text-align: justify;
+	}
+	#pages section h2{
+		margin: 15px 0 10px;
+	}
+
+#pageflip-canvas {
+	position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  left: 0;
+  top: 100px;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  height: 810px;
+  width: 960px;
+  /* background: red; */
+  left: 50%;
+  TOP: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.paper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  width: 880px;
+  height: 730px;
+  position: absolute;
+}
+
+canvas {
+  pointer-events: none;
+}
