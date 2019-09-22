@@ -7,7 +7,7 @@
 }
 
 .sidebarItem .itemComments {
-    cursor: pointer;
+    /* cursor: pointer; */
     color: green;
 }
 

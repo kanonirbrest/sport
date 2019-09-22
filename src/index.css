@@ -114,7 +114,7 @@ body {
 #pageflip-canvas {
 	position: absolute;
   z-index: 100;
-  cursor: pointer;
+  /* cursor: pointer; */
   left: 0;
   top: 100px;
 }
@@ -148,4 +148,21 @@ body {
 
 canvas {
   pointer-events: none;
+}
+
+.defaultLink a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  /* cursor: url('https://lh4.ggpht.com/F1IUEsfMUNpVp6qB1uh5jXGKJzRZoB2kGof9kWlfls0ghXhPCCqPX8XSQs_ROEi6Xshn=w100'), auto; */
+}
+
+/*todo make canvas another cursor*/
+
+.ck-editor {
+  max-height: 500px;
+  overflow: auto;
+  padding-bottom: 10px;
 }

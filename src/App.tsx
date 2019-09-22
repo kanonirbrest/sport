@@ -10,9 +10,13 @@ import MainContent from './components/MainContent/MainContent';
 import Sidebar from './components/Sidebar/Sidebar';
 import Banner from './components/Banner/Banner';
 import Post from './components/Post/Post/Post';
+import AddArticle from './components/AddArticle/AddArticle';
 
 import './assets/styles/mainPage.css';
 import './assets/styles/paperEffect.css';
+
+import loupsImg from './assets/images/loups.jpg'
+import {url} from 'inspector';
 
 const Caanvas = React.forwardRef((props, ref: any) => (
   <canvas id="pageflip-canvas" ref={ref}></canvas>
@@ -28,10 +32,12 @@ class App extends Component {
 
   componentDidMount() {
     console.log(this.canvasRef);
+    console.log(loupsImg, 'img');
   }
 
   render() {
     return (
+      // <div className="wrapper" style={{ cursor: 'url(./assets/svg/loop.png)' }}>
       <div className="wrapper">
         <div className="mainContainer">
           <div className="paper">
@@ -42,6 +48,7 @@ class App extends Component {
               {/* <Banner /> */}
               <Route path="/" exact render={() => <MainContent canvas={this.canvasRef} />} />
               <Route path="/post/:id" render={() => <Post />} />
+              <Route path="/addArticle" render={() => <AddArticle />} />
               {/* <MainContent/> */}
             </div>
           </div>

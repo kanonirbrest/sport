@@ -5,9 +5,13 @@
     text-decoration: none;
     list-style-type: none;
     min-width: 100px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .menu li:hover {
     opacity: .5;
+}
+
+.menu a:hover {
+  opacity: .5;
 }
