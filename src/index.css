@@ -166,3 +166,7 @@ canvas {
   overflow: auto;
   padding-bottom: 10px;
 }
+
+.editorWrapper {
+  padding: 10px;
+}

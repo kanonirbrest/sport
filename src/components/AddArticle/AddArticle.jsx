@@ -4,7 +4,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default function AddArticle() {
   
-  const [editorValue, setEditorValue] = useState('<p>Hello from CKEditor 5!</p>');
+  const editorValue = '<p>Hello from CKEditor 5!</p>';
   
   let onChangeEditorValue = (event, editor) => {
     console.log(event, '----------', editor);
@@ -14,18 +14,23 @@ export default function AddArticle() {
     console.log('Editor is ready to use!', editor);
   }
 
-
+  const saveEditorValue = () => {
+    console.log('save');
+  }
 
   return (
     <div>
       <h1>add Article</h1>
 
-      <CKEditor
-        editor={ClassicEditor}
-        data={editorValue}
-        onInit={onInitEditor}
-        onChange={onChangeEditorValue}
-      />
+      <button onClick={saveEditorValue}>Save</button>
+      <div className='editorWrapper'>
+        <CKEditor
+          editor={ClassicEditor}
+          data={editorValue}
+          onInit={onInitEditor}
+          onChange={onChangeEditorValue}
+        />
+      </div>
     </div>
   )
 }
